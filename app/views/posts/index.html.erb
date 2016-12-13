@@ -1,0 +1,8 @@
+<div>
+  <% @posts.each do |post| %>
+    <div><%= link_to post.title, posts_path(post.id) %></div>
+
+  <% end %>
+
+
+</div>
