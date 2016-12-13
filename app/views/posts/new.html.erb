@@ -1,22 +1,12 @@
-<h3>Post Form</h3>
-  <form action="<%= posts_path %>" method="post">
-    <label>Post title:</label><br>
-
-  <input id="title" type="text" name="post[title]" >
-  <label>Post description:</label><br>
-
-  <input id="description" type="text" name="post[description]" >
-<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="submit" name="submit" value="Submit Post">
 
 
 </form>
-<!-- <%= form_tag posts_path do %>
+<%= form_tag posts_path do %>
   <label>Post title:</label><br>
-  <%= text_field_tag :'post[title]' %><br>
+  <%= text_field_tag :'post[title]',:id => 'title' %><br>
 
   <label>Post description:</label><br>
-  <%= text_area_tag :'post[description]' %><br>
+  <%= text_area_tag :'post[description]' ,:id => 'description'%><br>
 
   <%= submit_tag "Submit Post" %>
-<% end %> -->
+<% end %>
