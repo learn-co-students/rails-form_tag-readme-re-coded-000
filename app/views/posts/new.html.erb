@@ -1,11 +1,11 @@
 <h1>Post Form</h1>
 <%= form_tag posts_path do %>
   <label>Post title:</label><br>
-   <input id="title" type="text" name="post[title]" value="">
+   <%= text_field_tag :'title'%>
 
   <label>Post description:</label><br>
-  <textarea id="description" name="post[description]"></textarea><br>
+  <%= text_area_tag :'description'%><br>
 
    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <input type="submit" value="Submit Post">
+  <%= submit_tag "Submit Post" %>
 <% end %>
